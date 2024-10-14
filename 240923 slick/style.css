@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    vertical-align: bottom;
+}
+
+/* wrap 설정 */
+.wrap {
+    width: 80%;
+    margin: 300px auto;
+
+}
+/* 캐러셀 설정 */
+.carousel {
+    position: relative;
+}
+.carousel .box {
+    height: 240px;
+    margin: 10px;
+    position: relative;
+    border: 1px solid #000;
+}
+/* box 텍스트 가운데 정렬  */
+.slick-initialized .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    border-radius: 50%;
+    border: none;
+    background-color: #9e9e9e;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+}
+.carousel button:before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 20px;
+    color: #fff;
+}
+.carousel button.slick-prev {
+    left: -5%;
+}
+.carousel button.slick-prev:before {
+    content: "\f104";
+}
+.carousel button.slick-next {
+    right: -5%;
+}
+.carousel button.slick-next:before {
+    content: "\f105";
+}
+.carousel button:hover {
+    background-color: rgb(185, 185, 185);
+}
+

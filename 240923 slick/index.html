@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>slick</title>
+        <!-- fontawesome cdn -->
+        <script src="https://kit.fontawesome.com/fb97202f89.js" crossorigin="anonymous"></script>
+        <!-- slick css cdn -->
+        <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <!-- 외부스타일시트 -->
+        <link rel="stylesheet" href="style.css">
+        <!-- jquery cdn -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <!-- slick js cdn -->
+        <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    </head>
+    <body>
+        <section class="wrap">
+            <div class="carousel">
+                <div class="box">box1</div>
+                <div class="box">box2</div>
+                <div class="box">box3</div>
+                <div class="box">box4</div>
+                <div class="box">box5</div>
+                <div class="box">box6</div>
+                <div class="box">box7</div>
+                <div class="box">box8</div>
+                <div class="box">box9</div>
+                <div class="box">box10</div>
+            </div>
+        </section>
+        
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.carousel').slick({
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                        }},
+                        {
+                        breakpoint: 640,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        }}
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                    ]
+                });
+            });
+        </script>
+    </body>
+</html>
